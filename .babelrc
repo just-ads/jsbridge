@@ -1,0 +1,20 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/env"
+        ]
+      ]
+    }
+  },
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "loose": true,
+        "modules": false
+      }
+    ]
+  ]
+}

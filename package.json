@@ -1,0 +1,49 @@
+{
+  "name": "package-name",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.es.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "yarn test && cross-env NODE_ENV=production rollup -c",
+    "dev": "cross-env NODE_ENV=production rollup -c",
+    "release": "npm publish --registry http://81.69.243.156:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PZD2937/workerPool.git"
+  },
+  "keywords": [],
+  "author": "ADS <pzd2934970779@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PZD2937/workerPool/issues"
+  },
+  "homepage": "https://github.com/PZD2937/workerPool#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.4",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-commonjs": "^23.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "babel-jest": "^29.2.1",
+    "cross-env": "^7.0.3",
+    "jest": "^29.2.1",
+    "jest-environment-jsdom": "^29.2.1",
+    "rollup": "^3.2.3",
+    "standard": "^16.0.4"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/unit/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "clearMocks": true,
+    "coverageProvider": "v8",
+    "testEnvironment": "jsdom"
+  }
+}
